@@ -20,11 +20,6 @@ const Header = () => {
         </button>
         <ul className="hidden md:flex space-x-4">
           <li>
-            <Link to="/" className="text-white hover:text-primary-light font-bold p-5">
-              Home
-            </Link>
-          </li>
-          <li>
             <Link to="/Sobre" className="text-white hover:text-primary-light font-bold p-5">
               Sobre
             </Link>
@@ -45,15 +40,6 @@ const Header = () => {
             isOpen ? 'block' : 'hidden'
           } absolute top-28 left-0 w-full bg-primary-dark md:hidden flex flex-col space-y-4 p-5`}
         >
-          <li>
-            <Link 
-              to="/" 
-              className="text-white hover:text-primary-light font-bold p-2 underline"
-              onClick={() => setIsOpen(false)}
-            >
-              Home
-            </Link>
-          </li>
           <li>
             <Link 
               to="/Sobre" 

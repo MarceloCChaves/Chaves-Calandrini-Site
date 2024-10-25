@@ -12,6 +12,7 @@ const Properties = () => (
         {data.properties.filter((property) => property.disponivel).map((property) => {
           return (
             <PropertyCard
+              key={property.id}
               title={property.titulo}
               description={property.descricao}
               price={property.preco}
