@@ -1,26 +1,48 @@
 import { useState } from 'react';
 import { toast } from 'react-toastify';
+import emailjs from "@emailjs/browser";
+import 'react-toastify/dist/ReactToastify.css';
 
 const ContactForm = () => {
   const [form, setForm] = useState({ name: '', email: '', message: '' });
 
   const handleChange = (e) => {
-    setForm({ ...form, [e.target.name]: e.target.value });
+    const { name, value } = e.target;
+    setForm((prev) => ({ ...prev, [name]: value }));
   };
 
+  const serviceKey = import.meta.env.VITE_EMAILJS_SERVICE_KEY;
+  const templateKey = import.meta.env.VITE_EMAILJS_TEMPLATE_KEY;
+  const publicKey = import.meta.env.VITE_EMAILJS_PUBLIC_KEY;
+  
   const handleSubmit = (e) => {
-    try {
-      e.preventDefault();
-      toast.success("Mensagem enviada com sucesso!!");
-      setForm({ name: '', email: '', message: '' });
-    } catch (error) {
-      toast.error("Erro ao enviar mensagem");
-    }
+    e.preventDefault();
+
+    const templateParams = {
+      from_name: form.name,
+      email: form.email,
+      message: form.message,
+    };
+
+    emailjs
+      .send(
+        serviceKey,
+        templateKey,
+        templateParams,
+        publicKey,
+      )
+      .then(() => {
+        toast.success("Mensagem enviada com sucesso!");
+        setForm({ name: '', email: '', message: '' });
+      })
+      .catch((err) => {
+        toast.error("Erro ao enviar o email.");
+      });
   };
 
   return (
-    <form 
-      onSubmit={handleSubmit} 
+    <form
+      onSubmit={handleSubmit}
       className="max-w-lg mx-auto p-6 bg-primary-dark rounded shadow-md space-y-4"
     >
       <input
@@ -50,7 +72,10 @@ const ContactForm = () => {
         rows="4"
         required
       />
-      <button type="submit" className="w-full bg-primary-light text-primary-dark font-bold py-2 rounded">
+      <button
+        type="submit"
+        className="w-full bg-primary-light text-primary-dark font-bold py-2 rounded"
+      >
         Enviar
       </button>
     </form>
