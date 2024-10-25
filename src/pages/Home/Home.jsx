@@ -2,19 +2,22 @@ import Header from '../../components/Header/Header';
 import Footer from '../../components/Footer/Footer';
 import PropertyCard from '../../components/PropertyCard/PropertyCard';
 import { Link } from 'react-router-dom';
+import banner from '../../assets/Mesa-de-reunião.webp';
 
 const Home = () => (
   <>
     <Header />
-    <section className="relative h-96 bg-cover bg-center" style={{ backgroundImage: 'url(/images/banner.jpg)' }}>
-      <div className="bg-primary-light bg-opacity-50 h-full flex flex-col justify-center items-center text-white text-center p-4">
-        <h1 className="text-primary-dark text-4xl font-bold mb-4">Encontre o Imóvel dos Seus Sonhos</h1>
-        <p className="text-primary-dark max-w-md mb-6">
-          Na Chaves Calandrini, oferecemos as melhores opções para quem deseja comprar, vender ou alugar.
-        </p>
-        <Link to="/properties" className="bg-primary-dark hover:bg-blue-600 py-2 px-4 rounded text-white">
-          Ver Imóveis Disponíveis
-        </Link>
+    <section className="h-96 bg-cover bg-center-top" style={{ backgroundImage: `url(${banner})` }}>
+      <div className="bg-white bg-opacity-50 h-full flex flex-col justify-center items-center text-white text-center p-4">
+        <div className='bg-primary-light p-10 rounded bg-opacity-30 shadow-inner'>
+          <h1 className="text-primary-dark text-4xl font-bold mb-4">Encontre o imóvel dos seus sonhos</h1>
+          <p className="text-primary-dark mb-6 font-bold">
+            Na Chaves Calandrini, oferecemos as melhores opções para quem deseja comprar, vender ou alugar.
+          </p>
+          <Link to="/properties" className="bg-primary-dark hover:bg-blue-600 py-2 px-4 rounded text-white">
+            Ver Imóveis Disponíveis
+          </Link>
+        </div>
       </div>
     </section>
 
@@ -46,7 +49,7 @@ const Home = () => (
       <div className="max-w-4xl mx-auto text-center space-y-8">
         <h2 className="text-3xl text-primary-dark font-bold">Nossos Serviços</h2>
         <p className="text-primary-dark">
-          Oferecemos consultoria especializada, intermediação de vendas e locações, e suporte completo para 
+          Oferecemos consultoria especializada, intermediação de vendas e locações, e suporte completo para
           quem busca um novo lar ou investimento imobiliário.
         </p>
         <div className="flex justify-center space-x-4">
