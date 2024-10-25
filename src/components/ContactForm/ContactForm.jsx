@@ -1,19 +1,21 @@
 import { useState } from 'react';
+import { toast } from 'react-toastify';
 
 const ContactForm = () => {
   const [form, setForm] = useState({ name: '', email: '', message: '' });
-  const [status, setStatus] = useState('');
 
   const handleChange = (e) => {
     setForm({ ...form, [e.target.name]: e.target.value });
   };
 
   const handleSubmit = (e) => {
-    e.preventDefault();
-    console.log('Mensagem enviada:', form);
-    setStatus('Sua mensagem foi enviada com sucesso!');
-    setForm({ name: '', email: '', message: '' });
-    setTimeout(() => setStatus(''), 5000);
+    try {
+      e.preventDefault();
+      toast.success("Mensagem enviada com sucesso!!");
+      setForm({ name: '', email: '', message: '' });
+    } catch (error) {
+      toast.error("Erro ao enviar mensagem");
+    }
   };
 
   return (
@@ -51,7 +53,6 @@ const ContactForm = () => {
       <button type="submit" className="w-full bg-primary-light text-primary-dark font-bold py-2 rounded">
         Enviar
       </button>
-      {status && <p className="text-center text-green-600 font-semibold mt-2">{status}</p>}
     </form>
   );
 };

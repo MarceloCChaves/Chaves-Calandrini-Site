@@ -4,7 +4,10 @@ const PropertyCard = ({ title, description, price, image }) => (
     <div className="p-4">
       <h3 className="text-lg text-primary-dark font-semibold">{title}</h3>
       <p className="text-gray-600 text-primary-dark">{description}</p>
-      <span className="text-primary-dark block mt-2 text-blue-500 font-bold">{price}</span>
+      <span className="text-primary-dark block mt-2 text-blue-500 font-bold">{price.toLocaleString('en-US', {
+        style: 'currency',
+        currency: 'BRL',
+      })}</span>
     </div>
   </div>
 );

@@ -3,16 +3,22 @@ import Home from './pages/Home/Home';
 import About from './pages/About/About';
 import Properties from './pages/Properties/Property';
 import Contact from './pages/Contact/Contact';
+import { ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 const App = () => (
-  <Router>
-    <Routes>
-      <Route path="/" element={<Home />} />
-      <Route path="/about" element={<About />} />
-      <Route path="/properties" element={<Properties />} />
-      <Route path="/contact" element={<Contact />} />
-    </Routes>
-  </Router>
+  <>
+    <ToastContainer />
+    <Router>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/Sobre" element={<About />} />
+        <Route path="/Imóveis" element={<Properties />} />
+        <Route path='Imóveis/:id' />
+        <Route path="/Contato" element={<Contact />} />
+      </Routes>
+    </Router>
+  </>
 );
 
 export default App;

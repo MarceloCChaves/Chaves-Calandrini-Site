@@ -3,6 +3,7 @@ import Footer from '../../components/Footer/Footer';
 import PropertyCard from '../../components/PropertyCard/PropertyCard';
 import { Link } from 'react-router-dom';
 import banner from '../../assets/Mesa-de-reunião.webp';
+import data from "../../data/data.json";
 
 const Home = () => (
   <>
@@ -14,7 +15,7 @@ const Home = () => (
           <p className="text-primary-dark mb-6 font-bold">
             Na Chaves Calandrini, oferecemos as melhores opções para quem deseja comprar, vender ou alugar.
           </p>
-          <Link to="/properties" className="bg-primary-dark hover:bg-blue-600 py-2 px-4 rounded text-white">
+          <Link to="/Imóveis" className="bg-primary-dark hover:bg-blue-600 py-2 px-4 rounded text-white">
             Ver Imóveis Disponíveis
           </Link>
         </div>
@@ -22,30 +23,22 @@ const Home = () => (
     </section>
 
     <main className="bg-primary-dark p-8">
-      <h2 className="text-center text-white text-3xl font-bold mb-8">Imóveis em Destaque</h2>
+      <h2 className="flex justify-center text-white text-3xl font-bold mb-8">Imóveis em Destaque</h2>
       <section className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-        <PropertyCard
-          title="Apartamento de Alto Padrão"
-          description="Apartamento mobiliado, vista para a cidade, no coração da capital."
-          price="R$ 1.200.000"
-          image="/images/apartamento.jpg"
-        />
-        <PropertyCard
-          title="Casa com Piscina"
-          description="Casa ampla em condomínio fechado, com área de lazer completa."
-          price="R$ 750.000"
-          image="/images/casa.jpg"
-        />
-        <PropertyCard
-          title="Cobertura Exclusiva"
-          description="Cobertura com 4 suítes e espaço gourmet, perfeita para receber amigos."
-          price="R$ 2.500.000"
-          image="/images/cobertura.jpg"
-        />
+        {data.properties.map((property) => {
+          return(
+            <PropertyCard
+              title={property.titulo}
+              description={property.descricao}
+              price={property.preco}
+              image={property.imagem}
+            />
+          )
+        })}
       </section>
     </main>
 
-    <section className="bg-primary-light bg-opacity-50 py-16">
+    <section className="flex justify-center bg-primary-light bg-opacity-50 py-16">
       <div className="max-w-4xl mx-auto text-center space-y-8">
         <h2 className="text-3xl text-primary-dark font-bold">Nossos Serviços</h2>
         <p className="text-primary-dark">
@@ -66,7 +59,7 @@ const Home = () => (
       <p className="max-w-lg mx-auto mb-8">
         Precisa de ajuda para encontrar o imóvel ideal? Nossa equipe está pronta para atender você!
       </p>
-      <Link to="/contact" className="bg-primary-light text-primary-dark font-semibold py-2 px-6 rounded">
+      <Link to="/Contato" className="bg-primary-light text-primary-dark font-semibold py-2 px-6 rounded">
         Fale Conosco
       </Link>
     </section>
