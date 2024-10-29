@@ -13,7 +13,7 @@ const Home = () => (
         <div className='bg-primary-light p-10 rounded bg-opacity-30 shadow-inner'>
           <h1 className="text-primary-dark text-4xl font-bold mb-4">Encontre o imóvel dos seus sonhos</h1>
           <p className="text-primary-dark mb-6 font-bold">
-            Na Chaves Calandrini, oferecemos as melhores opções para quem deseja comprar, vender ou alugar.
+            Na Chaves Calandrini, oferecemos as melhores opções para quem deseja encontrar o apartamento dos sonhos.
           </p>
           <Link to="/Imóveis" className="bg-primary-dark hover:bg-blue-600 py-2 px-4 rounded text-white">
             Ver Imóveis Disponíveis
@@ -26,8 +26,11 @@ const Home = () => (
       <h2 className="flex justify-center text-white text-3xl font-bold mb-8">Imóveis em Destaque</h2>
       <section className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
         {data.properties.map((property) => {
+          console.log(property.imagem)
           return(
             <PropertyCard
+              key={property.id}
+              id={property.id}
               title={property.titulo}
               description={property.descricao}
               price={property.preco}

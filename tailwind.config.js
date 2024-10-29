@@ -9,7 +9,9 @@ export default {
     colors: {
       'primary-light': '#e4d496',
       'primary-dark': '#451a03',
-      'white': '#ffffff'
+      'white': '#ffffff',
+      "green": "#198754",
+      "red": "#dc3545"
     },
   },
   plugins: [],

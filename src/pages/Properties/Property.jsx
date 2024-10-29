@@ -13,6 +13,7 @@ const Properties = () => (
           return (
             <PropertyCard
               key={property.id}
+              id={property.id}
               title={property.titulo}
               description={property.descricao}
               price={property.preco}
