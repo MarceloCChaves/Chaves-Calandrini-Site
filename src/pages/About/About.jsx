@@ -18,7 +18,7 @@ const About = () => (
           <h2 className="text-primary-dark text-xl font-semibold mb-2">Nossa Missão</h2>
           <p>
             Facilitar a realização do sonho da casa própria e garantir soluções ágeis e seguras para
-            quem busca vender, comprar ou alugar imóveis.
+            quem busca vender ou alugar imóveis.
           </p>
         </div>
 

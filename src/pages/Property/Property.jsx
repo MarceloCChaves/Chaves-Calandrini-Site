@@ -14,7 +14,7 @@ const Property = () => {
   return (
     <>
       <Header />
-      <main className="flex flex-col items-center justify-center min-h-screen bg-gray-50 py-12">
+      <main className="flex flex-col items-center justify-center bg-primary-light bg-opacity-50 min-h-screen bg-gray-50 py-12">
         <section className="bg-primary-light shadow-lg rounded-lg overflow-hidden max-w-4xl w-full mx-4 md:mx-0">
           <img
             src={imagem}

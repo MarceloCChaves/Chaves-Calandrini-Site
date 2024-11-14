@@ -24,10 +24,12 @@ const Home = () => (
 
     <main className="bg-primary-dark p-8">
       <h2 className="flex justify-center text-white text-3xl font-bold mb-8">Imóveis em Destaque</h2>
+      <p className="text-white text-center mb-8">
+        Esses são alguns dos nossos imóveis, clique na imagem para saber mais.
+      </p>
       <section className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
         {data.properties.map((property) => {
-          console.log(property.imagem)
-          return(
+          return (
             <PropertyCard
               key={property.id}
               id={property.id}
@@ -35,9 +37,10 @@ const Home = () => (
               description={property.descricao}
               price={property.preco}
               image={property.imagem}
+              disponivel={property.disponivel}
             />
           )
-        })}
+        }).slice(0, 3)}
       </section>
     </main>
 
@@ -48,10 +51,18 @@ const Home = () => (
           Oferecemos consultoria especializada, intermediação de vendas e locações, e suporte completo para
           quem busca um novo lar ou investimento imobiliário.
         </p>
-        <div className="flex justify-center space-x-4">
-          <div className="bg-primary-dark p-4 rounded shadow-md max-w-sm">
-            <h3 className="text-xl text-white font-semibold mb-2">Aluguéis</h3>
-            <p className='text-white'>Imóveis prontos para morar ou investir, com contratos flexíveis e gestão simplificada.</p>
+        <div className='flex justify-between'>
+          <div className="flex justify-center space-x-4">
+            <div className="bg-primary-dark p-4 rounded shadow-md max-w-sm">
+              <h3 className="text-xl text-white font-semibold mb-2">Aluguéis</h3>
+              <p className='text-white'>Imóveis prontos para morar ou investir, com contratos flexíveis e gestão simplificada.</p>
+            </div>
+          </div>
+          <div className="flex justify-center space-x-4">
+            <div className="bg-primary-dark p-4 rounded shadow-md max-w-sm">
+              <h3 className="text-xl text-white font-semibold mb-2">Venda</h3>
+              <p className='text-white'>Para quem busca vender um imóvel, oferecemos todo o suporte para a realização.</p>
+            </div>
           </div>
         </div>
       </div>

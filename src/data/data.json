@@ -15,7 +15,7 @@
     },
     {
       "id": 2,
-      "titulo": "Edifício Ville Ana Nery",
+      "titulo": "Vila Conceição",
       "descricao": "Apartamento moderno com 2 quartos, 2 banheiros, e uma vista incrível da cidade.",
       "endereco": "Travessa do Chaco, 1789",
       "preco": 1400,
@@ -24,11 +24,11 @@
       "banheiros": 2,
       "garagem": true,
       "imagem": "https://i.imgur.com/Z5aoBMW.jpeg",
-      "disponivel": true
+      "disponivel": false
     },
     {
       "id": 3,
-      "titulo": "Edifício Ville Ana Nery",
+      "titulo": "Condomínio Residencial Olimpus",
       "descricao": "Apartamento moderno com 2 quartos, 2 banheiros, e uma vista incrível da cidade.",
       "endereco": "Travessa do Chaco, 1789",
       "preco": 2000,
@@ -37,7 +37,7 @@
       "banheiros": 2,
       "garagem": true,
       "imagem": "https://i.imgur.com/Z5aoBMW.jpeg",
-      "disponivel": true
+      "disponivel": false
     }
   ]
 }

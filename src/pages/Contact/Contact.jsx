@@ -32,7 +32,7 @@ const Contact = () => (
             </li>
             <li className="flex items-center space-x-2">
               <FaClock />
-              <span>Horário: Segunda a Sexta, 9h às 18h</span>
+              <span>Horário: Segunda a Sexta, 8h às 18h</span>
             </li>
           </ul>
           <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15954.233430828264!2d-48.493405!3d-1.439963!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x92a48ebdd0828535%3A0x8ed231de8c0f1ea9!2sCondom%C3%ADnio%20do%20Edif%C3%ADcio%20Mirai%20Offices!5e0!3m2!1spt-BR!2sbr!4v1729890672664!5m2!1spt-BR!2sbr" className='w-11/12' height="250" allowFullScreen="" loading="lazy" referrerPolicy="no-referrer-when-downgrade"></iframe>
