@@ -6,6 +6,7 @@ import Contact from './pages/Contact/Contact';
 import Property from './pages/Property/Property';
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import NotFound from './pages/NotFound/NotFound';
 
 const App = () => (
   <>
@@ -17,6 +18,8 @@ const App = () => (
         <Route path="/Imóveis" element={<Properties />} />
         <Route path='/Imóveis/:id' element={<Property/>}/>
         <Route path="/Contato" element={<Contact />} />
+        <Route path="/404" element={<NotFound />} />
+        <Route path="*" element={<NotFound/>} />
       </Routes>
     </Router>
   </>

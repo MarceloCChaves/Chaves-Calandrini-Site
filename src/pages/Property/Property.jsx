@@ -1,11 +1,23 @@
-import { useParams } from "react-router-dom";
+import { useParams, useNavigate } from "react-router-dom";
 import Header from "../../components/Header/Header";
 import Footer from "../../components/Footer/Footer";
 import properties from "../../data/data.json";
+import { useEffect } from "react";
 
 const Property = () => {
   const { id } = useParams();
   const property = properties.properties.find((item) => item.id == id);
+  const navigate = useNavigate();
+
+  useEffect(() => {
+    if (!property) {
+      navigate('/404');
+    }
+  }, [property, navigate]);
+
+  if (!property) {
+    return null;
+  }
 
   const {
     titulo, descricao, endereco, preco, tipo, quartos, banheiros, garagem, imagem, disponivel

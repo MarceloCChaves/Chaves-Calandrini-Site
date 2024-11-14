@@ -2,6 +2,7 @@ import Header from '../../components/Header/Header';
 import Footer from '../../components/Footer/Footer';
 import PropertyCard from '../../components/PropertyCard/PropertyCard';
 import data from "../../data/data.json";
+import { Link } from 'react-router-dom';
 
 const Properties = () => {
   const isAvaliable = data.properties.filter((property) => property.disponivel);
@@ -25,10 +26,12 @@ const Properties = () => {
                 />
               </>
             )
-          }) : 
-          <article>
-            <h3 className="text-primary-dark text-center font-bold mb-4">Desculpe, infelizmente não há imóveis disponíveis no momento</h3>
-          </article>}
+          }) :
+            <article className='text-center'>
+              <h3 className="text-primary-dark font-bold mb-4">Desculpe, infelizmente não há imóveis disponíveis no momento</h3>
+              <Link to="/" className='bg-primary-dark text-white py-2 px-6 rounded'>Voltar a Home</Link>
+            </article>
+          }
         </section>
       </main>
       <Footer />
