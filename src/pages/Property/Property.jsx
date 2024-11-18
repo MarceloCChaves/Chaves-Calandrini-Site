@@ -27,12 +27,14 @@ const Property = () => {
     <>
       <Header />
       <main className="flex flex-col items-center justify-center bg-primary-light bg-opacity-50 min-h-screen bg-gray-50 py-12">
-        <section className="bg-primary-light shadow-lg rounded-lg overflow-hidden max-w-4xl w-full mx-4 md:mx-0">
-          <img
-            src={imagem}
-            alt={titulo}
-            className="w-full h-64 object-cover"
-          />
+        <section className="flex items-center bg-primary-light shadow-lg rounded-lg overflow-hidden max-w-4xl w-full mx-4 md:mx-0">
+          <div>
+            <img
+              src={imagem}
+              alt={titulo}
+              className="w-full object-cover"
+            />
+          </div>
           <div className="p-8">
             <h1 className="text-3xl font-bold text-primary-dark mb-4 text-center">{titulo}</h1>
             <p className="text-primary-dark mb-6">{descricao}</p>
@@ -59,9 +61,12 @@ const Property = () => {
               <p className="text-primary-dark">
                 <strong>Garagem:</strong> {garagem ? "Sim" : "Não"}
               </p>
-              <p className={`text-lg font-semibold ${disponivel ? "text-green" : "text-red"}`}>
+              <strong className="text-primary-dark">
+                Situação: 
+              <span className={`text-lg font-semibold ${disponivel ? "text-green" : "text-red"}`}>
                 {disponivel ? "Disponível" : "Indisponível"}
-              </p>
+              </span>
+              </strong>
             </div>
 
             {disponivel ? <button className="w-full bg-primary-dark text-white py-3 rounded-md">

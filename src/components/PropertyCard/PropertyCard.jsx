@@ -4,7 +4,7 @@ const PropertyCard = ({ title, description, price, image, id, disponivel }) => (
   <Link to={`/Imóveis/${id}`}>
     <div className="flex justify-center">
       <div className="bg-primary-light rounded-lg shadow-md m-4">
-        <img src={image} alt={title} className="w-full h-48 object-cover" />
+        <img src={image} alt={title} className="w-full h-96 object-cover" />
         <div className="p-4">
           <h3 className="text-lg text-primary-dark font-semibold">{title}</h3>
           <p className=" text-primary-dark">{description}</p>
