@@ -10,7 +10,12 @@
       "quartos": 2,
       "banheiros": 2,
       "garagem": true,
-      "imagem": "https://i.imgur.com/JhDRgJL.jpeg",
+      "imagens": [
+        {
+          "id": 1,
+          "fachada": "https://i.imgur.com/JhDRgJL.jpeg"
+        }
+      ],
       "disponivel": false
     },
     {
@@ -23,7 +28,12 @@
       "quartos": 2,
       "banheiros": 1,
       "garagem": false,
-      "imagem": "https://i.imgur.com/jMRMWQs.jpeg",
+      "imagens": [
+        {
+          "id": 1,
+          "fachada": "https://i.imgur.com/jMRMWQs.jpeg"
+        }
+      ],
       "disponivel": false
     },
     {
@@ -36,7 +46,12 @@
       "quartos": 1,
       "banheiros": 1,
       "garagem": true,
-      "imagem": "https://i.imgur.com/vPXA0Qr.jpeg",
+      "imagens": [
+        {
+          "id": 1,
+          "fachada": "https://i.imgur.com/vPXA0Qr.jpeg"
+        }
+      ],
       "disponivel": false
     }
   ]

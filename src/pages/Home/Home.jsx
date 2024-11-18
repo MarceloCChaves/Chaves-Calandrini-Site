@@ -36,7 +36,7 @@ const Home = () => (
               title={property.titulo}
               description={property.descricao}
               price={property.preco}
-              image={property.imagem}
+              image={property.imagens[0].fachada}
               disponivel={property.disponivel}
             />
           )

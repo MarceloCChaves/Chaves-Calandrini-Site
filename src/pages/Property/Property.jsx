@@ -20,7 +20,7 @@ const Property = () => {
   }
 
   const {
-    titulo, descricao, endereco, preco, tipo, quartos, banheiros, garagem, imagem, disponivel
+    titulo, descricao, endereco, preco, tipo, quartos, banheiros, garagem, imagens, disponivel
   } = property;
 
   return (
@@ -30,7 +30,7 @@ const Property = () => {
         <section className="flex items-center bg-primary-light shadow-lg rounded-lg overflow-hidden max-w-4xl w-full mx-4 md:mx-0">
           <div>
             <img
-              src={imagem}
+              src={imagens[0].fachada}
               alt={titulo}
               className="w-full object-cover"
             />
