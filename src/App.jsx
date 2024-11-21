@@ -7,6 +7,14 @@ import Property from './pages/Property/Property';
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import NotFound from './pages/NotFound/NotFound';
+import { register } from 'swiper/element';
+
+import "swiper/css";
+import "swiper/css/navigation";
+import "swiper/css/pagination";
+import "swiper/css/scrollbar";
+
+register();
 
 const App = () => (
   <>
