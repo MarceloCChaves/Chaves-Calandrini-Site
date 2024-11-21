@@ -13,7 +13,7 @@ const Home = () => (
         <div className='bg-primary-light p-10 rounded bg-opacity-30 shadow-inner'>
           <h1 className="text-primary-dark text-4xl font-bold mb-4">Encontre o imóvel dos seus sonhos</h1>
           <p className="text-primary-dark mb-6 font-bold">
-            Na Chaves Calandrini, oferecemos as melhores opções para quem deseja encontrar o apartamento dos sonhos.
+            Na Chaves Calandrini, localizada em Belém - PA, oferecemos as melhores opções para quem deseja encontrar o apartamento dos sonhos.
           </p>
           <Link to="/Imóveis" className="bg-primary-dark hover:bg-blue-600 py-2 px-4 rounded text-white">
             Ver Imóveis Disponíveis
@@ -25,7 +25,7 @@ const Home = () => (
     <main className="bg-primary-dark p-8">
       <h2 className="flex justify-center text-white text-3xl font-bold mb-8">Imóveis em Destaque</h2>
       <p className="text-white text-center mb-8">
-        Esses são alguns dos nossos imóveis, clique na imagem para saber mais.
+        Conheça algumas das melhores opções de imóveis disponíveis em Belém. Clique na imagem para saber mais.
       </p>
       <section className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
         {data.properties.map((property) => {
@@ -36,7 +36,7 @@ const Home = () => (
               title={property.titulo}
               description={property.descricao}
               price={property.preco}
-              image={property.imagens[0].fachada}
+              image={property.imagens[0].imagem}
               disponivel={property.disponivel}
             />
           )
@@ -48,8 +48,7 @@ const Home = () => (
       <div className="max-w-4xl mx-auto text-center space-y-8">
         <h2 className="text-3xl text-primary-dark font-bold">Nossos Serviços</h2>
         <p className="text-primary-dark">
-          Oferecemos consultoria especializada, intermediação de vendas e locações, e suporte completo para
-          quem busca um novo lar ou investimento imobiliário.
+          Oferecemos consultoria especializada, intermediação de vendas e locações, e suporte completo para quem busca um novo lar ou investimento imobiliário.
         </p>
         <div className='flex justify-between'>
           <div className="flex justify-center space-x-4">

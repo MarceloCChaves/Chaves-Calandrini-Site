@@ -13,7 +13,7 @@
       "imagens": [
         {
           "id": 1,
-          "fachada": "https://i.imgur.com/JhDRgJL.jpeg"
+          "imagem": "https://i.imgur.com/JhDRgJL.jpeg"
         }
       ],
       "disponivel": false
@@ -31,7 +31,15 @@
       "imagens": [
         {
           "id": 1,
-          "fachada": "https://i.imgur.com/jMRMWQs.jpeg"
+          "imagem": "https://i.imgur.com/jMRMWQs.jpeg"
+        },
+        {
+          "id": 2,
+          "imagem": "https://i.imgur.com/9etJSnx.jpeg"
+        },
+        {
+          "id": 3,
+          "imagem": "https://i.imgur.com/S8q0JSf.jpeg"
         }
       ],
       "disponivel": false
@@ -49,7 +57,7 @@
       "imagens": [
         {
           "id": 1,
-          "fachada": "https://i.imgur.com/vPXA0Qr.jpeg"
+          "imagem": "https://i.imgur.com/vPXA0Qr.jpeg"
         }
       ],
       "disponivel": false
