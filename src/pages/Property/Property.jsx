@@ -31,7 +31,7 @@ const Property = () => {
       <main className="flex flex-col items-center justify-center bg-primary-light bg-opacity-50 min-h-screen bg-gray-50 py-12">
         <section className="flex flex-col md:flex-row items-center bg-primary-light shadow-lg rounded-lg overflow-hidden max-w-4xl w-full mx-4 md:mx-0">
           <div className="w-full md:w-1/2">
-            <Carousel data={imagens} />
+            {imagens.length > 1 ? <Carousel data={imagens} /> : <img src={imagens[0].imagem} alt="Capa" />}
           </div>
           <div className="w-full md:w-1/2 p-8">
             <h1 className="text-3xl font-bold text-primary-dark mb-4 text-center">{titulo}</h1>
