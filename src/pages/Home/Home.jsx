@@ -4,6 +4,7 @@ import PropertyCard from '../../components/PropertyCard/PropertyCard';
 import { Link } from 'react-router-dom';
 import banner from '../../assets/aluga-apartamento.webp';
 import data from "../../data/data.json";
+import ScrollToTopButton from '../../components/ToTopButton/ScrollToTopButton';
 
 const Home = () => (
   <>
@@ -77,6 +78,7 @@ const Home = () => (
       </Link>
     </section>
     <Footer />
+    <ScrollToTopButton/>
   </>
 );
 
