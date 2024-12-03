@@ -12,8 +12,8 @@ const Header = () => {
         <Link to="/">
           <img src={Logo} alt="Logo" className="h-20 rounded" />
         </Link>
-        <button 
-          className="md:hidden text-white text-3xl" 
+        <button
+          className="md:hidden text-white text-3xl"
           onClick={() => setIsOpen(!isOpen)}
         >
           {isOpen ? <FaTimes /> : <FaBars />}
@@ -36,37 +36,38 @@ const Header = () => {
           </li>
         </ul>
         <ul
-          className={`${
-            isOpen ? 'block' : 'hidden'
-          } absolute top-28 left-0 w-full bg-primary-dark md:hidden flex flex-col space-y-4 p-5`}
+          className={`${isOpen ? 'block' : 'hidden'
+            } absolute top-28 left-0 w-full bg-primary-dark md:hidden flex flex-col space-y-4 p-5`}
         >
-          <li>
-            <Link 
-              to="/Sobre" 
-              className="text-white hover:text-primary-light font-bold p-2 underline"
+          <Link
+            to="/Sobre"
+            className="text-white hover:text-primary-light font-bold p-2 underline">
+            <li
               onClick={() => setIsOpen(false)}
             >
               Sobre
-            </Link>
-          </li>
-          <li>
-            <Link 
-              to="/Imóveis" 
-              className="text-white hover:text-primary-light font-bold p-2 underline"
+            </li>
+          </Link>
+          <Link
+            to="/Imóveis"
+            className="text-white hover:text-primary-light font-bold p-2 underline"
+          >
+            <li
               onClick={() => setIsOpen(false)}
             >
               Imóveis
-            </Link>
-          </li>
-          <li>
-            <Link 
-              to="/Contato" 
-              className="text-white hover:text-primary-light font-bold p-2 underline"
+            </li>
+          </Link>
+          <Link
+            to="/Contato"
+            className="text-white hover:text-primary-light font-bold p-2 underline"
+          >
+            <li
               onClick={() => setIsOpen(false)}
             >
               Contato
-            </Link>
-          </li>
+            </li>
+          </Link>
         </ul>
       </nav>
     </header>
