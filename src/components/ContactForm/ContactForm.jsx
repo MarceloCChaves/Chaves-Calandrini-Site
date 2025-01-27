@@ -5,7 +5,6 @@ import ReCAPTCHA from 'react-google-recaptcha';
 
 const ContactForm = () => {
   const [form, setForm] = useState({ name: '', email: '', message: '' });
-  const [captchaValue, setCaptchaValue] = useState(null);
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -15,7 +14,6 @@ const ContactForm = () => {
   const serviceKey = import.meta.env.VITE_EMAILJS_SERVICE_KEY;
   const templateKey = import.meta.env.VITE_EMAILJS_TEMPLATE_KEY;
   const publicKey = import.meta.env.VITE_EMAILJS_PUBLIC_KEY;
-  const captchaKey = import.meta.env.VITE_GOOGLE_RECAPTCHA_KEY;
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -36,7 +34,6 @@ const ContactForm = () => {
       .then(() => {
         toast.success("Mensagem enviada com sucesso!");
         setForm({ name: '', email: '', message: '' });
-        setCaptchaValue(null);
         setTimeout(() => {
           window.location.reload();
         }, 5000)
@@ -78,10 +75,8 @@ const ContactForm = () => {
         rows="4"
         required
       />
-      <ReCAPTCHA sitekey={captchaKey} onChange={(value) => setCaptchaValue(value)} />
       <button
         className="w-full bg-primary-light text-primary-dark font-bold py-2 rounded disabled:bg-opacity-50"
-        disabled={!captchaValue}
         type="submit"
       >
         Enviar
