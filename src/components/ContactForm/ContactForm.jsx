@@ -34,9 +34,6 @@ const ContactForm = () => {
       .then(() => {
         toast.success("Mensagem enviada com sucesso!");
         setForm({ name: '', email: '', message: '' });
-        setTimeout(() => {
-          window.location.reload();
-        }, 5000)
       })
       .catch((err) => {
         toast.error("Erro ao enviar o email.");
